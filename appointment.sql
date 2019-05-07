@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50721
 File Encoding         : 65001
 
-Date: 2019-05-07 16:15:13
+Date: 2019-05-07 18:23:48
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -21,10 +21,10 @@ SET FOREIGN_KEY_CHECKS=0;
 DROP TABLE IF EXISTS `comment`;
 CREATE TABLE `comment` (
   `ID` varchar(50) NOT NULL DEFAULT '' COMMENT '评论Id',
+  `username` varchar(50) NOT NULL COMMENT '动态用户',
   `dongtaiID` varchar(50) NOT NULL COMMENT '动态ID',
   `name` varchar(50) NOT NULL COMMENT '评论用户',
-  `context` varchar(255) NOT NULL COMMENT '评论内容',
-  PRIMARY KEY (`ID`)
+  `context` varchar(255) NOT NULL COMMENT '评论内容'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
@@ -75,7 +75,9 @@ CREATE TABLE `reply` (
   `reply_type` varchar(50) NOT NULL COMMENT '评论类型是回复评论还是回复评论的评论',
   `cotext` varchar(255) NOT NULL COMMENT '回复的内容',
   `to_uid` varchar(50) NOT NULL COMMENT '回复的回复人的id',
-  `from_uid` varchar(50) NOT NULL COMMENT '回复人id'
+  `from_uid` varchar(50) NOT NULL COMMENT '回复人id',
+  `username` varchar(50) NOT NULL COMMENT '动态名称',
+  `dongtaiid` varchar(50) NOT NULL COMMENT '动态id'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
@@ -89,9 +91,11 @@ DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
   `name` varchar(50) NOT NULL COMMENT '用户名',
   `password` varchar(50) NOT NULL COMMENT '密码',
-  `school` varchar(50) NOT NULL COMMENT '学校',
-  `academy` varchar(50) NOT NULL COMMENT '学院',
-  `major` varchar(50) NOT NULL COMMENT '学院',
+  `school` varchar(50) DEFAULT NULL COMMENT '学校',
+  `academy` varchar(50) DEFAULT NULL COMMENT '学院',
+  `major` varchar(50) DEFAULT NULL COMMENT '学院',
+  `grade` varchar(50) DEFAULT NULL COMMENT '年级',
+  `class` varchar(50) DEFAULT NULL COMMENT '班级',
   `cardzheng` varchar(50) NOT NULL COMMENT '身份证正面照',
   `cardfan` varchar(50) NOT NULL COMMENT '身份证反面',
   `image` varchar(50) DEFAULT NULL COMMENT '头像',
