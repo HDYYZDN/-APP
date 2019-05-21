@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:background="@mipmap/bk_register"
+        android:fitsSystemWindows="true"
+        android:layout_height="match_parent">
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="注册"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:textColor="#856d72"
+            android:textSize="40sp">
+    </TextView>
+
+
+    <RelativeLayout
+            android:id="@+id/layout_zon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:gravity="center">
+        <FrameLayout
+                android:id="@+id/useremail_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="90dp"
+                android:gravity="center" >
+
+            <EditText
+                    android:id="@+id/et_email"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="3dp"
+                    android:maxLength="20"
+                    android:hint="请输入你的常用邮箱"
+                    android:paddingLeft="80dp"
+                    android:paddingRight="20dp">
+            </EditText>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_marginStart="20dp"
+                    android:text="*邮箱："
+                    android:textSize="18sp"
+                    android:visibility="visible" />
+            <TextView
+                    android:id="@+id/a"
+                    android:layout_width="40dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center"
+                    android:text="+62"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:visibility="invisible" />
+        </FrameLayout>
+        <FrameLayout
+                android:id="@+id/userpasswd1_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/useremail_layout"
+                android:layout_marginTop="6dp"
+                android:gravity="center" >
+            <EditText
+                    android:id="@+id/et_pass1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="3dp"
+                    android:inputType="textPassword"
+                    android:hint="请输入密码"
+                    android:maxLength="20"
+                    android:paddingLeft="80dp"
+                    android:paddingRight="20dp" >
+            </EditText>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_marginStart="20dp"
+                    android:textSize="18sp"
+                    android:text="*密码：" />
+            <TextView
+                    android:id="@+id/b"
+                    android:layout_width="40dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center"
+                    android:text="+62"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:visibility="invisible" />
+        </FrameLayout>
+        <FrameLayout
+                android:id="@+id/userpasswd2_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/userpasswd1_layout"
+                android:layout_marginTop="6dp"
+                android:gravity="center" >
+            <EditText
+                    android:id="@+id/et_pass2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="3dp"
+                    android:inputType="textPassword"
+                    android:hint="请确认密码"
+                    android:maxLength="20"
+                    android:paddingLeft="115dp"
+                    android:paddingRight="20dp" >
+            </EditText>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_marginStart="20dp"
+                    android:textSize="18sp"
+                    android:text="*确认密码：" />
+            <TextView
+                    android:id="@+id/c"
+                    android:layout_width="40dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center"
+                    android:text="+62"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:visibility="invisible" />
+        </FrameLayout>
+    </RelativeLayout>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_zon"
+            android:layout_marginTop="50dp">
+        <ImageView
+                android:id="@+id/ib_register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/register"
+                android:layout_marginLeft="145dp">
+        </ImageView>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
